@@ -1,0 +1,66 @@
+.navigation {
+    font-family: 'Roboto Slab', serif;
+    
+    overflow: hidden;
+   
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        float: left;
+        margin: 1rem;
+    }
+    &__pull-right {
+        float: right;
+    }
+    &__nav {
+        z-index: 999;
+        position: fixed;
+        // background-color: green;
+        top: 0;
+        height: 6rem;
+        width: 100%;
+    }
+    &__link {
+        &:link,
+        &:visited {
+            color: #ffffff;
+            font-weight: 570;
+            text-decoration: none;
+            display: inline-block;
+            padding: 4px 4px;
+            font-size: 1rem;
+            letter-spacing: .2rem;
+        }
+    }
+}
+
+
+.active {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    
+    padding: 2px 5px;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 1);
+    border-right: 1px solid rgba(255, 255, 255, 1);
+    transition: border .3s, border-color .3s;
+}
+.social {
+
+    font-size: 2rem;
+    position: relative;
+    top: 90%;
+    left: 40%;
+    width: 60%;
+    cursor: pointer;
+    display: block;
+
+    &__link {
+        margin-right: 5rem;
+       
+    }
+
+
+}
