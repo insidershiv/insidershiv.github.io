@@ -76,8 +76,7 @@ $(document).ready(function () {
     //Get current scroll position
     var currentScrollPos = $(document).scrollTop();
     currentScrollPos = currentScrollPos + 45;
-    console.log(currentScrollPos);
-    // ***adjusting the navigation bakkground color*** 
+  // ***adjusting the navigation bakkground color*** 
     if (currentScrollPos < 579) {
       $('.navigation__nav').css(
 
