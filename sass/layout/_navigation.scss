@@ -1,8 +1,6 @@
 .navigation {
     font-family: 'Roboto Slab', serif;
-    
     overflow: hidden;
-   
     &__list {
         list-style: none;
     }
@@ -15,8 +13,7 @@
     }
     &__nav {
         z-index: 999;
-        position: fixed;
-        // background-color: green;
+        position: fixed; // background-color: green;
         top: 0;
         height: 6rem;
         width: 100%;
@@ -35,11 +32,9 @@
     }
 }
 
-
 .active {
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
-    
     padding: 2px 5px;
     border-top: 1px solid rgba(255, 255, 255, 1);
     border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -47,20 +42,17 @@
     border-right: 1px solid rgba(255, 255, 255, 1);
     transition: border .3s, border-color .3s;
 }
-.social {
 
-    font-size: 2rem;
+.social {
+    font-size: 2.5rem;
     position: relative;
     top: 90%;
-    left: 40%;
-    width: 60%;
+    height: auto;
+    width: 100%;
     cursor: pointer;
     display: block;
-
+    text-align: center;
     &__link {
         margin-right: 5rem;
-       
     }
-
-
 }

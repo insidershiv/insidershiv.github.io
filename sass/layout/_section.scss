@@ -13,8 +13,6 @@
         position: relative;
         @include respond(phone) {
             height: 180vh;
-
-
         }
     }
     &__work-list {
@@ -25,8 +23,6 @@
         @include respond(phone) {
             text-align: left;
             margin-top: 10%;
-
-
         }
     }
     &__work-first {
@@ -45,21 +41,18 @@
         color: #ffffff;
         margin: 2rem 5rem 2rem 2rem;
         padding: 2rem 3rem;
-        @include respond(phone){
+        @include respond(phone) {
             text-align: left;
-            
         }
     }
-
     &__work-third {
         margin-top: 3rem;
     }
     &__contact {
-        background-color: rgba(0, 7, 17 , .9);
+        background-color: rgba(0, 7, 17, .9);
         height: 100vh;
         width: 100%;
         position: absolute;
-        
     }
     &__image {
         max-width: 50%;
@@ -68,17 +61,19 @@
         left: 30%;
     }
     &__contact-image {
-       position: absolute;
-       max-width: 100%;
-       height: auto;
-       margin-left: 3rem;
-       top: 10%;
-       @include respond(tab-port){
-           display: none;
-       }
-        
+        position: absolute;
+        width: inherit;
+        top: 10%;
+        height: auto;
+        @include respond(tab-port) {
+            display: none;
+        }
     }
-    &__contact-desc{
+    &__contact-imgcontainer {
+        width: 10%;
+        margin-left: 3rem;
+    }
+    &__contact-desc {
         position: relative;
         text-align: center;
         margin-top: 10rem;
@@ -86,31 +81,20 @@
         font-family: 'Roboto Slab', serif;
         font-size: 2.5rem;
         font-weight: 200;
-        
     }
-
     &__social {
-        font-size: 2rem;
+        font-size: 2.5rem;
         position: relative;
         top: 30%;
-        left: 40%;
-        width: 60%;
+        height: auto;
+        width: 100%;
         display: block;
-
-        @include respond(phone){
-            left: 20%;
-            width: 70%;
-
-            
-        }
-        
-
+        text-align: center;
         &-item {
             margin-left: 1rem;
             margin-right: 5rem;
         }
     }
-
 }
 
 .about__me-desc {
@@ -163,7 +147,7 @@
     background-color: #ffffff;
     font-family: 'Lato', serif;
     font-weight: 400;
-    @include respond(phone){
+    @include respond(phone) {
         left: 30%;
         transform: left 2s;
     }
@@ -177,13 +161,30 @@
     font-family: 'Roboto Slab', serif;
     font-size: 4rem;
     white-space: nowrap;
-    @include respond(phone){
-        
+    @include respond(phone) {
         margin-left: 5rem;
-        
     }
 }
 
 .center {
     text-align: center;
+}
+
+// ** social icon **
+.fab {
+    color: #26D991;
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: translateY(-.7rem);
+        color: #ffffff;
+    }
+}
+
+.fas {
+    color: #26D991;
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: translateY(-.7rem);
+        color: #ffffff;
+    }
 }
