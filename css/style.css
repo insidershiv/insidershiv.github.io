@@ -274,12 +274,12 @@ body {
 
 .section__work {
   background-color: tomato;
-  height: 230vh;
+  height: 130vh;
   width: 100%;
   position: relative; }
   @media only screen and (max-width: 37.5em) {
     .section__work {
-      height: 180vh; } }
+      height: 170vh; } }
 
 .section__work-list {
   position: absolute;

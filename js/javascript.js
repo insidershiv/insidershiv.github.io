@@ -76,7 +76,8 @@ $(document).ready(function () {
     //Get current scroll position
     var currentScrollPos = $(document).scrollTop();
     currentScrollPos = currentScrollPos + 45;
-  // ***adjusting the navigation bakkground color*** 
+    console.log(currentScrollPos);
+  // ***adjusting the navigation bakkground color***
     if (currentScrollPos < 579) {
       $('.navigation__nav').css(
 
@@ -85,12 +86,13 @@ $(document).ready(function () {
     if (currentScrollPos >= 579 && currentScrollPos <= 1213) {
       $('.navigation__nav').css('background-color', '#1f895c');
     }
-    if (currentScrollPos >= 1220 && currentScrollPos <= 2687) {
+    if (currentScrollPos >= 1220 && currentScrollPos <= 2100) {
       $('.navigation__nav').css('background-color', '#FF6347');
     }
-    if (currentScrollPos >= 2688) {
+    if (currentScrollPos >= 2101) {
       $('.navigation__nav').css('background-color', '#191F28');
     }
+
 
     //Iterate through all node
 
