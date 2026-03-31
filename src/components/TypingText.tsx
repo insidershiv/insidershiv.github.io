@@ -37,7 +37,7 @@ const TypingText = ({ texts, className = "", speed = 80, deleteSpeed = 40, pause
   }, [currentText, currentIndex, isDeleting, texts, speed, deleteSpeed, pauseTime]);
 
   return (
-    <span className={className}>
+    <span className={`inline-block max-w-full break-words md:break-normal ${className}`}>
       {currentText}
       <span className="terminal-cursor text-primary">█</span>
     </span>

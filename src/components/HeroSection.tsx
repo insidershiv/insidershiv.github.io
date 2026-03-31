@@ -6,12 +6,12 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-x-hidden"
     >
       <InteractiveGrid />
       <div className="scanline absolute inset-0 z-10" />
 
-      <div className="relative z-20 text-center px-6 max-w-4xl">
+      <div className="relative z-20 w-full min-w-0 max-w-4xl mx-auto px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="font-mono text-lg md:text-xl text-secondary-foreground mb-10 h-8"
+          className="font-mono text-base sm:text-lg md:text-xl text-secondary-foreground mb-10 mx-auto flex w-full min-w-0 max-w-sm min-h-[2.75rem] items-center justify-center break-words sm:max-w-xl md:max-w-none md:break-normal sm:min-h-8"
         >
           <TypingText
             texts={[
@@ -71,17 +71,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="mx-auto grid min-w-0 w-full max-w-md grid-cols-1 gap-4 sm:max-w-2xl sm:grid-cols-2"
         >
           <a
             href="#projects"
-            className="px-8 py-3 bg-primary text-primary-foreground font-mono font-semibold rounded-sm hover-lift glow-border"
+            className="flex w-full items-center justify-center whitespace-nowrap px-6 py-3 text-center font-mono font-semibold bg-primary text-primary-foreground rounded-sm hover-lift glow-border"
           >
             {">"} view_projects()
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 border border-primary text-primary font-mono font-semibold rounded-sm hover-lift hover:bg-primary/10 transition-colors"
+            className="flex w-full items-center justify-center whitespace-nowrap px-6 py-3 text-center font-mono font-semibold border border-primary text-primary rounded-sm hover-lift hover:bg-primary/10 transition-colors"
           >
             {">"} contact_me()
           </a>

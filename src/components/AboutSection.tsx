@@ -28,7 +28,7 @@ const rowVariants = {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-32 px-6">
+    <section id="about" className="overflow-x-hidden py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -67,10 +67,10 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="relative md:sticky md:top-28 perspective-[1200px]">
+            <div className="relative overflow-x-hidden md:sticky md:top-28 md:overflow-visible perspective-[1200px]">
               <motion.div
                 aria-hidden
-                className="pointer-events-none absolute -inset-8 rounded-2xl opacity-40 blur-3xl"
+                className="pointer-events-none absolute -inset-4 md:-inset-8 rounded-2xl opacity-40 blur-3xl"
                 animate={{
                   scale: [1, 1.08, 1],
                   opacity: [0.35, 0.55, 0.35],
