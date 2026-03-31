@@ -26,15 +26,9 @@ jobs:
         with:
           node-version: "22"
           cache: npm
-      # npm ci requires package-lock.json in the repo; otherwise fall back to npm install
+      # npm install (not npm ci): tolerates small lockfile drift; avoids flaky CI when package.json/lock differ slightly on the remote
       - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            echo "::warning::package-lock.json not found — run npm install locally, commit package-lock.json, and push for reproducible builds"
-            npm install
-          fi
+        run: npm install --no-audit --no-fund
       - run: npm run build
       - name: SPA fallback (404 → index for client routes)
         run: cp dist/index.html dist/404.html
