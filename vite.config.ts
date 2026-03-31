@@ -3,7 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
+// User site: https://insidershiv.github.io/ — base must stay "/"
 export default defineConfig({
+  base: "/",
   server: {
     host: "::",
     port: 8080,

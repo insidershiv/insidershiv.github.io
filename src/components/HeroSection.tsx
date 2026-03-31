@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
-import TypingText from "./TypingText";
 import InteractiveGrid from "./InteractiveGrid";
+import TypingText from "./TypingText";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <InteractiveGrid />
       <div className="scanline absolute inset-0 z-10" />
 
@@ -56,10 +59,10 @@ const HeroSection = () => {
         >
           <TypingText
             texts={[
-              "React, Next.js & TypeScript",
-              "Multi-tenant platforms & micro-frontends",
-              "Performance & bundle optimization",
-              "React Native — Android & iOS",
+              "Building systems, not just UI",
+              "Designing for scale and reliability",
+              "Optimizing for real user impact",
+              "Handling complexity with clean architecture",
             ]}
           />
         </motion.div>

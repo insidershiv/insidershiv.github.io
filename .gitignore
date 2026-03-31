@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Local secrets (Git push with PAT — never commit)
+local.env
+.git-credentials
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
