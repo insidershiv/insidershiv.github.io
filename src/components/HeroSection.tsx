@@ -86,18 +86,19 @@ const HeroSection = () => {
             {">"} contact_me()
           </a>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float"
-        >
-          <div className="w-5 h-8 border-2 border-primary/40 rounded-full flex justify-center pt-1">
-            <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
-          </div>
-        </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="pointer-events-none absolute bottom-6 left-1/2 z-20 -translate-x-1/2 animate-float sm:bottom-8"
+        aria-hidden
+      >
+        <div className="flex h-8 w-5 justify-center rounded-full border-2 border-primary/40 pt-1">
+          <div className="h-2 w-1 animate-bounce rounded-full bg-primary" />
+        </div>
+      </motion.div>
     </section>
   );
 };
