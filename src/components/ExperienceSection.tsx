@@ -18,7 +18,14 @@ const experiences = [
       "Key insight: Designing clear system boundaries and enforcing predictable data flow was essential to scaling both the platform and the engineering team without introducing instability.",
       "Challenge: Managing shared state and communication across micro-frontends, along with tenant-specific configurations in a shared codebase, required careful contract design and a scalable configuration strategy. We implemented structured, environment-driven configuration layers and feature flags to support client-specific behavior without code duplication, while enforcing strict contracts to maintain consistency, avoid tight coupling, and prevent configuration drift across tenants.",
     ],
-    stack: ["React", "TypeScript", "React Native", "Micro-frontends", "CI/CD"],
+    stack: [
+      "React",
+      "TypeScript",
+      "React Native",
+      "Micro-frontends",
+      "CI/CD",
+      "Redux",
+    ],
   },
   {
     role: "Software Engineer",
@@ -60,7 +67,9 @@ const ExperienceSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-mono text-sm text-primary mb-2">{"// experience"}</p>
+          <p className="font-mono text-sm text-primary mb-2">
+            {"// experience"}
+          </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-16">
             Journey<span className="text-primary">.</span>
           </h2>
@@ -88,10 +97,14 @@ const ExperienceSection = () => {
                       <h3 className="text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors">
                         {exp.role}
                       </h3>
-                      <span className="font-mono text-xs text-muted-foreground">{exp.period}</span>
+                      <span className="font-mono text-xs text-muted-foreground">
+                        {exp.period}
+                      </span>
                     </div>
 
-                    <p className="font-mono text-sm text-primary mb-4">@{exp.company}</p>
+                    <p className="font-mono text-sm text-primary mb-4">
+                      @{exp.company}
+                    </p>
                     <ul className="text-sm text-muted-foreground mb-4 leading-relaxed space-y-2 list-disc pl-4">
                       {exp.bullets.map((b, j) => (
                         <li key={j}>{b}</li>
@@ -100,7 +113,10 @@ const ExperienceSection = () => {
 
                     <div className="flex flex-wrap gap-2">
                       {exp.stack.map((s) => (
-                        <span key={s} className="font-mono text-xs px-2 py-1 bg-muted text-muted-foreground rounded-sm">
+                        <span
+                          key={s}
+                          className="font-mono text-xs px-2 py-1 bg-muted text-muted-foreground rounded-sm"
+                        >
                           {s}
                         </span>
                       ))}
